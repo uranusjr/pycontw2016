@@ -91,6 +91,7 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     'core',
+    'festivals',
     'proposals',
     'users',
 )
@@ -103,6 +104,7 @@ if 'postgres' in DATABASES['default']['ENGINE']:
 
 
 MIDDLEWARE_CLASSES = (
+    'festivals.middlewares.AprilFoolMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'core.middlewares.LocaleFallbackMiddleware',

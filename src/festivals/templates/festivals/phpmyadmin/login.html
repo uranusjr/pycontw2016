@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="icon" href="favicon.ico" type="age/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./themes/pmahomme/jquery/jquery-ui-1.11.4.css">
+<link rel="stylesheet" type="text/css" href="js/codemirror/lib/codemirror.css?v=4.7.0-dev">
+<link rel="stylesheet" type="text/css" href="js/codemirror/addon/hint/show-hint.css?v=4.7.0-dev">
+<link rel="stylesheet" type="text/css" href="js/codemirror/addon/lint/lint.css?v=4.7.0-dev">
+<link rel="stylesheet" type="text/css" href="phpmyadmin.css.php?nocache=4280944969ltr">
+<link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=4.7.0-dev" media="print" id="printcss">
+<title>phpMyAdmin</title>
+
+</head>
+
+<body id="loginform">
+
+<div id="pma_header"></div>
+
+<div id="page_content">
+  <div class="container">
+  <a href="./url.php?url=https%3A%2F%2Fwww.phpmyadmin.net%2F" target="_blank" class="logo"><img src="./themes/pmahomme/img/logo_right.png" id="imLogo" name="imLogo" alt="phpMyAdmin" border="0"></a>
+       <h1>Welcome to <bdo dir="ltr" lang="en">phpMyAdmin</bdo></h1><noscript>
+&lt;div class="error"&gt;&lt;img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /&gt; Javascript must be enabled past this point!&lt;/div&gt;</noscript>
+<div class="hide js-show" style="display: block;"><form method="get" action="index.php" class="disableAjax"><input type="hidden" name="db" value=""><input type="hidden" name="table" value="">{% csrf_token %}<fieldset><legend lang="en" dir="ltr">Language</legend><select name="lang" class="autosubmit" lang="en" dir="ltr" id="sel-lang"><option value="en" selected="selected">English</option></select></fieldset></form></div>
+    <br>
+    <!-- Login form -->
+    <form method="post" action="index.php" name="login_form" class="disableAjax login hide js-show" style="display: inline;">
+        <fieldset>
+        <legend>Log in<a href="./url.php?url=http%3A%2F%2Fdocs.phpmyadmin.net%2Fen%2Flatest%2Findex.html" target="documentation"><img src="themes/dot.gif" title="Documentation" alt="Documentation" class="icon ic_b_help"></a></legend><div class="item">
+                <label for="input_username">Username:</label>
+                <input type="text" name="pma_username" id="input_username" value="" size="24" class="textfield">
+            </div>
+            <div class="item">
+                <label for="input_password">Password:</label>
+                <input type="password" name="pma_password" id="input_password" value="" size="24" class="textfield">
+            </div></fieldset>
+        <fieldset class="tblFooters">
+            <input value="Go" type="submit" id="input_go"><input type="hidden" name="target" value="index.php">{% csrf_token %}</fieldset>
+    </form></div>
+</div><div id="viewportSize" style="position: fixed; bottom: 0px; right: 0px; z-index: 99999999; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-family: Menlo; font-size: 11px; line-height: 20px; width: 85px; text-align: center;"></div></body></html>
